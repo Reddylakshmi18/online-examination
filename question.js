@@ -14,10 +14,10 @@ const questions = [
 {
     question: "Which HTML tag is used to create a hyperlink?",
     options: [
-        "<link>",
-        "<a>",
-        "<href>",
-        "<url>"
+        "link",
+        "a",
+        "href",
+        "url"
     ],
     answer: 1
 },
@@ -25,10 +25,10 @@ const questions = [
 {
     question: "Which HTML element is used to insert an image?",
     options: [
-        "<picture>",
-        "<img>",
-        "<image>",
-        "<src>"
+        "picture",
+        "img",
+        "image",
+        "src"
     ],
     answer: 1
 },
