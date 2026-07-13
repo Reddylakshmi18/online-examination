@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Quiz Examination</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <script src="question.js"></script>
+
+    <script src="scripts.js"></script>
+
+</head>
+
+<body>
+
+ 
+
+    <div class="login-page" id="loginPage">
+
+        <div class="login-box">
+
+            <h1>Online Examination</h1>
+
+            <p>Please enter your details to start the exam</p>
+
+            <input type="text" id="studentName" placeholder="Student Name">
+
+            <input type="text" id="studentId" placeholder="Registration Number">
+
+            <button type="button" onclick="startExam()">
+                Start Examination
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="quiz-page hidden" id="quizPage">
+
+    
+
+        <header>
+
+            <div class="logo">
+
+                <h2>Online Quiz System</h2>
+
+            </div>
+
+            <div class="student-info">
+
+                <h3 id="welcomeStudent"></h3>
+
+            </div>
+
+            <div class="timer-box">
+
+                ⏳ Time Left
+
+                <span id="timer">
+                    20:00
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- Main -->
+
+        <div class="main-container">
+
+            <!-- Question Palette -->
+
+            <aside class="sidebar">
+
+                <h3>Questions</h3>
+
+                <div id="questionPalette">
+
+                </div>
+
+            </aside>
+
+
+            <!-- Question Area -->
+
+            <section class="question-container">
+
+                <div class="progress">
+
+                    <div class="progress-bar" id="progressBar">
+
+                    </div>
+
+                </div>
+
+                <div class="question-number" id="questionNumber">
+
+                    Question 1 of 20
+
+                </div>
+
+                <div class="question-box">
+
+                    <h2 id="questionText">
+
+                        Loading Question...
+
+                    </h2>
+
+                </div>
+
+
+                <div id="optionsContainer">
+
+                </div>
+
+
+
+                <div class="navigation">
+
+                    <button onclick="previousQuestion()">
+                        Previous
+                    </button>
+
+                    <button onclick="clearAnswer()">
+                        Clear
+                    </button>
+
+                    <button onclick="nextQuestion()">
+                        Save & Next
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- Footer -->
+
+        <footer>
+
+            <button class="submit-btn" onclick="submitExam()">
+
+                Submit Examination
+
+            </button>
+
+        </footer>
+
+    </div>
+
+
+
+
+    <div class="result-page hidden" id="resultPage">
+
+        <div class="result-card">
+
+            <h1>
+
+                Examination Result
+
+            </h1>
+
+            <h2 id="resultStudent">
+
+            </h2>
+
+            <div class="result-details">
+
+                <p>
+
+                    Total Questions :
+
+                    <span id="totalQuestions"></span>
+
+                </p>
+
+                <p>
+
+                    Correct Answers :
+
+                    <span id="correctAnswers"></span>
+
+                </p>
+
+                <p>
+
+                    Wrong Answers :
+
+                    <span id="wrongAnswers"></span>
+
+                </p>
+
+                <p>
+
+                    Unanswered :
+
+                    <span id="unanswered"></span>
+
+                </p>
+
+                <p>
+
+                    Score :
+
+                    <span id="score"></span>
+
+                </p>
+
+                <p>
+
+                    Percentage :
+
+                    <span id="percentage"></span>
+
+                </p>
+
+                <h2 id="status">
+
+                </h2>
+
+            </div>
+
+            <button onclick="location.reload()">
+
+                Take Exam Again
+
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

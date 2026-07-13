@@ -1,0 +1,538 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+body{
+    background:#eef2f7;
+    color:#222;
+}
+
+/* ===========================
+   COMMON
+=========================== */
+
+.hidden{
+    display:none;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   LOGIN PAGE
+=========================== */
+
+.login-page{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f4c81,#3fa9f5);
+}
+
+.login-box{
+
+    width:420px;
+    background:#fff;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    text-align:center;
+
+}
+
+.login-box h1{
+
+    color:#0f4c81;
+    margin-bottom:10px;
+
+}
+
+.login-box p{
+
+    color:#666;
+    margin-bottom:25px;
+
+}
+
+.login-box input{
+
+    width:100%;
+    padding:14px;
+    margin:12px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+
+}
+
+.login-box input:focus{
+
+    border-color:#0f4c81;
+    outline:none;
+
+}
+
+.login-box button{
+
+    width:100%;
+    padding:15px;
+    background:#0f4c81;
+    color:#fff;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:600;
+    margin-top:15px;
+
+}
+
+.login-box button:hover{
+
+    background:#08385f;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+
+    width:100%;
+    background:#fff;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    position:sticky;
+    top:0;
+    z-index:100;
+
+}
+
+.logo h2{
+
+    color:#0f4c81;
+
+}
+
+.student-info{
+
+    font-weight:600;
+    color:#333;
+
+}
+
+.timer-box{
+
+    background:#dc3545;
+    color:#fff;
+    padding:12px 22px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+.main-container{
+
+    display:flex;
+    gap:25px;
+    padding:30px;
+
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+
+    width:260px;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.sidebar h3{
+
+    text-align:center;
+    margin-bottom:20px;
+    color:#0f4c81;
+
+}
+
+#questionPalette{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+
+}
+
+.palette-btn{
+
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#ddd;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+
+}
+
+.palette-btn:hover{
+
+    background:#0f4c81;
+    color:#fff;
+
+}
+
+.palette-btn.active{
+
+    background:#0f4c81;
+    color:white;
+
+}
+
+.palette-btn.answered{
+
+    background:#28a745;
+    color:#fff;
+
+}
+
+/* ===========================
+   QUESTION AREA
+=========================== */
+
+.question-container{
+
+    flex:1;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.progress{
+
+    width:100%;
+    height:12px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:25px;
+
+}
+
+.progress-bar{
+
+    height:100%;
+    width:0%;
+    background:#28a745;
+    transition:.4s;
+
+}
+
+.question-number{
+
+    color:#555;
+    margin-bottom:15px;
+    font-weight:600;
+
+}
+
+.question-box{
+
+    margin-bottom:25px;
+
+}
+
+.question-box h2{
+
+    line-height:1.6;
+
+}
+
+/* ===========================
+   OPTIONS
+=========================== */
+
+#optionsContainer{
+
+    margin-top:20px;
+
+}
+
+.option{
+
+    background:#f7f9fc;
+    border:2px solid #ddd;
+    border-radius:10px;
+    padding:16px;
+    margin-bottom:18px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.option:hover{
+
+    background:#ecf5ff;
+    border-color:#0f4c81;
+
+}
+
+.option.selected{
+
+    background:#0f4c81;
+    color:#fff;
+    border-color:#0f4c81;
+
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.navigation{
+
+    margin-top:35px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:15px;
+
+}
+
+.navigation button{
+
+    padding:14px 28px;
+    border-radius:8px;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+
+}
+
+.navigation button:nth-child(1){
+
+    background:#6c757d;
+
+}
+
+.navigation button:nth-child(2){
+
+    background:#ffc107;
+    color:#000;
+
+}
+
+.navigation button:nth-child(3){
+
+    background:#007bff;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    text-align:center;
+    margin:25px;
+
+}
+
+.submit-btn{
+
+    background:#28a745;
+    color:#fff;
+    padding:16px 45px;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+
+}
+
+.submit-btn:hover{
+
+    background:#218838;
+
+}
+
+/* ===========================
+   RESULT PAGE
+=========================== */
+
+.result-page{
+
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#eef2f7;
+    padding:20px;
+
+}
+
+.result-card{
+
+    width:550px;
+    background:#fff;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+    text-align:center;
+
+}
+
+.result-card h1{
+
+    color:#0f4c81;
+    margin-bottom:20px;
+
+}
+
+.result-details{
+
+    text-align:left;
+    margin-top:25px;
+
+}
+
+.result-details p{
+
+    margin:14px 0;
+    font-size:18px;
+
+}
+
+#status{
+
+    margin-top:25px;
+    font-size:30px;
+    font-weight:bold;
+
+}
+
+.result-card button{
+
+    margin-top:35px;
+    background:#0f4c81;
+    color:#fff;
+    padding:15px 35px;
+    border-radius:8px;
+    font-size:16px;
+
+}
+
+.result-card button:hover{
+
+    background:#08385f;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.main-container{
+
+    flex-direction:column;
+
+}
+
+.sidebar{
+
+    width:100%;
+
+}
+
+#questionPalette{
+
+    grid-template-columns:repeat(5,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+header{
+
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+
+}
+
+.question-container{
+
+    padding:20px;
+
+}
+
+.navigation{
+
+    flex-direction:column;
+
+}
+
+.navigation button{
+
+    width:100%;
+
+}
+
+.login-box{
+
+    width:90%;
+
+}
+
+.result-card{
+
+    width:95%;
+
+}
+
+#questionPalette{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+}
